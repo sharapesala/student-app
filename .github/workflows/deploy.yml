@@ -23,8 +23,7 @@ jobs:
         env:
           CI: true
   deploy:
-    needs:
-      - build
+    needs: [build]
     runs-on: ubuntu-latest
     steps:
       - name: SSH deploy

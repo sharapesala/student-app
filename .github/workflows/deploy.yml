@@ -31,7 +31,7 @@ jobs:
     runs-on: ubuntu-latest
 
   steps: 
-    - name:SSH deploy
+    - name: SSH deploy
        uses: sharapesala/student-app@master
        with: 
           host: ${{ secrets.HOST }}

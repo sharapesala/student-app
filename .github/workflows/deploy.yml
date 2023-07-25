@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: SSH deploy
-        uses: sharapesala/student-app@master
+        uses: sharapesala/student-app@main
         with:
           host: "${{ secrets.HOST }}"
           username: "${{ secrets.USER }}"

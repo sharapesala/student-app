@@ -27,14 +27,15 @@ jobs:
     needs:
     - build
     runs-on: ubuntu-latest
+
   steps:
-  - name: SSH deploy
-    uses: sharapesala/student-app@master
-    with:
-      host: "${{ secrets.HOST }}"
-      username: "${{ secrets.USER }}"
-      key: "${{ secrets.KEY }}"
-      port: "${{ secrets.PORT }}"
-      script: "curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh
+   - name: SSH deploy
+     uses: sharapesala/student-app@master
+     with:
+       host: "${{ secrets.HOST }}"
+       username: "${{ secrets.USER }}"
+       key: "${{ secrets.KEY }}"
+       port: "${{ secrets.PORT }}"
+       script: "curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh
         | bash\nnvm install 14\nnpm install -g pm2\ncd ~/CICD\ngit pull origin main\nnpm
         install\nnpm run build\npm2 restart api                    \n"

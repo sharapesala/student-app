@@ -30,6 +30,6 @@ db.sequelize.sync()
 
 const port = process.env.port || 8081;
 app.listen(port, () => {
-    console.log(`server is running on ${port}.`);
+    console.log(`server is running on: ${port}.`);
 });
 

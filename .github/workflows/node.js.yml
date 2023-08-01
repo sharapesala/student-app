@@ -1,5 +1,15 @@
 # This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+- name: Clear GitHub Actions Cache
+  run: echo "::set-output name=cache-hit::false"
+  id: cache
+
+# Rest of your workflow steps go here
+
+- name: Cache the build
+  run: echo "::set-output name=cache-hit::true"
+  if: steps.cache.outputs.cache-hit != 'true'
+
 
 name: Node.js CI
 

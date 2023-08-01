@@ -38,7 +38,8 @@ jobs:
 
     steps:
      - name: SSH deploy
-       uses: sharapesala/student-app@mainnode --ver
+       uses: sharapesala/student-app@main
+       
        with:
           host: ${{secrets.HOST}}
           username: ${{secrets.USER}}

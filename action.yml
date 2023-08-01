@@ -1,18 +1,3 @@
-name: 'My Custom Action'
-description: 'My custom GitHub Action'
-inputs:
-  input1:
-    description: 'Input parameter 1'
-    required: true
-  input2:
-    description: 'Input parameter 2'
-    required: false
-outputs:
-  output1:
-    description: 'Output parameter 1'
-runs:
-  using: 'node12'
-  main: 'index.js'
 
 name: My Workflow
 on:
